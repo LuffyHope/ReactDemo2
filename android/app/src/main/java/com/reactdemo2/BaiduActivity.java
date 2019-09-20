@@ -28,8 +28,9 @@ public class BaiduActivity extends AppCompatActivity implements DefaultHardwareB
         super.onCreate(savedInstanceState);
         mReactRootView = new ReactRootView(this);
         mReactInstanceManager = ReactInstanceManager.builder()
-                .setBundleAssetName("index.android.bundle")
-                .setJSMainModulePath("shenzhen")
+                .setBundleAssetName("index.android.bundle")//这个可以先不管以后再将照抄就行
+                .setJSMainModulePath("shenzhen")//这个看作是 深圳市
+                //下面照抄
                 .setApplication(getApplication())
                 .setCurrentActivity(this)
                 .addPackage(new MainReactPackage())
@@ -38,7 +39,7 @@ public class BaiduActivity extends AppCompatActivity implements DefaultHardwareB
                 .build();
 
         mReactRootView.startReactApplication(mReactInstanceManager,
-                "baidu",
+                "baidu",//这个看作 百度
                 null);
         setContentView(mReactRootView);
     }
